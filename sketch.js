@@ -7,7 +7,9 @@ var score
 function preload(){
 
 
-monkey_running =                                                 loadAnimation("monkey_0.png","monkey_1.png","monkey_2.png",    "monkey_3.png","monkey_4.png","monkey_5.png","monkey_6.png",  "monkey_7.png","monkey_8.png")
+monkey_running =loadAnimation("monkey_0.png","monkey_1.png","monkey_2.png", 
+   "monkey_3.png","monkey_4.png","monkey_5.png","monkey_6.png", 
+    "monkey_7.png","monkey_8.png")
 
 bananaImage = loadImage("banana.png");
 obstacleImage = loadImage("obstacle.png")
@@ -20,7 +22,7 @@ obstacleImage = loadImage("obstacle.png")
 
 
 function setup() {
-  //createCanvas(600, 600);
+  createCanvas(displayWidth,displayHeight);
   
   
   
@@ -49,6 +51,8 @@ function draw() {
   
   background(220);
   
+  camera.position.x = monkey.x
+  camera.position.y = monkey.y
   
   if(ground.x<0){
     ground.x=ground.width/2;
